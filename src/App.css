@@ -1,0 +1,49 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  height: 100vh;
+}
+
+.App {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+}
+
+.column {
+  height: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.black-column {
+  flex: 1;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+}
+
+.white-column {
+  flex: 2;
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .column {
+    flex: 1;
+  }
+}
+
+.centered-text {
+  margin: auto;
+  color: white;
+  text-align: center;
+  line-height: 50vw;
+  /* justify-content: center; */
+}
+
+/* sign in form */
