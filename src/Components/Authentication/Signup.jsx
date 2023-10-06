@@ -50,11 +50,11 @@ const Signup = () => {
                     </div>
                     <div className="grid-item">
                         <div className="centered">
-                            <h2>Login</h2>
-                            <p>Sign in with your account </p>
+                            <h2>SignUP</h2>
+                            <p>Create your account </p>
                             <div className="button-social">
-                                <button className="google-button"><i className="fab fa-google"></i>Sign In with Google</button>
-                                <button className="apple-button"><i className="fab fa-apple"></i>Sign In with Apple</button>
+                                <button className="google-button"><i className="fab fa-google"></i>Sign Up with Google</button>
+                                <button className="apple-button"><i className="fab fa-apple"></i>Sign Up with Apple</button>
                             </div>
                             <form action="#" method="post">
                                 <div className="form-group">
@@ -66,10 +66,10 @@ const Signup = () => {
                                     <input type="password" id="password" name="password" label='create password' value={password || ''} onChange={handlePasswordChange} required placeholder='Password' />
                                 </div>
                                 <p><a href="/forgot-password">Forgot Password?</a></p>
-                                <button type="submit" onClick={onSubmit}>Sign In</button>
+                                <button type="submit" onClick={onSubmit}>Sign Up</button>
                             </form>
 
-                            <p>Don't have an account? <NavLink to={'/2'}>Register here</NavLink></p>
+                            <p>I have an account... <NavLink to={'/'}>Login here</NavLink></p>
                         </div>
                     </div>
                 </div>

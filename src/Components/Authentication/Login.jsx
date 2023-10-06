@@ -68,7 +68,7 @@ const Login = () => {
                 <button type="submit" onClick={onLogin}>Log In</button>
               </form>
 
-              <p>Don't have an account? <NavLink to={'/2'}>Register here</NavLink></p>
+              <p>Don't have an account? <NavLink to={'/signup'}>Register here</NavLink></p>
             </div>
           </div>
         </div>

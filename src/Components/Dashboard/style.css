@@ -1,0 +1,24 @@
+/* App.css */
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    /* Sidebar takes auto width, Navbar takes the remaining space */
+    grid-template-rows: 100vh;
+    /* Sidebar spans full height */
+    grid-gap: 20px;
+}
+
+.sidebar {
+    margin: ;
+    padding: ;
+    background: linear-gradient(#4285F4, #286DE0);
+
+    color: #fff;
+    padding: 20px;
+}
+
+.navbar {
+    background: linear-gradient(#4285F4, #286DE0);
+    color: black;
+    padding: 20px;
+}
