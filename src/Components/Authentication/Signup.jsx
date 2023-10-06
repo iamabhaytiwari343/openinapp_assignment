@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './style.css';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import auth from '../../firebase';
+import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
+// import auth from '../../firebase';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -10,11 +10,11 @@ const Signup = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
-
+    const auth = getAuth();
     const onSubmit = async (e) => {
         e.preventDefault()
 
-        await createUserWithEmailAndPassword(getAuth, email, password).then((usercredential) => {
+        await createUserWithEmailAndPassword(auth, email, password).then((usercredential) => {
             const user = usercredential.user
             console.log(user);
             navigate("/1");
