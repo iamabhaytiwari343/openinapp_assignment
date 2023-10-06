@@ -1,0 +1,98 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.centered {
+    text-align: center;
+    /* Center text horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.button-social {
+    display: flex;
+}
+
+.google-button,
+.apple-button {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    /* Increased button padding */
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    /* White text color for better visibility */
+}
+
+.google-button {
+    background-color: #4285F4;
+    /* Google button color */
+}
+
+.apple-button {
+    background-color: #000;
+    /* Apple button color */
+}
+
+.google-button i,
+.apple-button i {
+    margin-right: 10px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    /* Adjusted input width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+    /* Improved transition */
+}
+
+.google-button:active,
+.apple-button:active,
+[type="submit"]:active {
+    background-color: #0D47A1;
+    /* Change background color when clicked */
+}
+
+.google-button:hover,
+.apple-button:hover,
+[type="submit"]:hover {
+    background-color: #1E40AF;
+    /* Change background color on hover */
+}
+
+/* Define the grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    /* justify-content: center;
+    align-items: center; */
+    /* Removed height property */
+}
+
+/* Style for each div */
+.grid-item {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.g1 {
+    background: linear-gradient(#4285F4, #286DE0);
+}
