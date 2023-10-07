@@ -1,0 +1,25 @@
+* {
+    margin: 0.2rem;
+    padding: 0.2rem;
+}
+
+.sidenav {
+    height: 100vh;
+    width: 20vw;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #4285F4 0%, #286DE0 100%);
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-radius: 1rem;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 160px;
+    padding: 0px 10px;
+}

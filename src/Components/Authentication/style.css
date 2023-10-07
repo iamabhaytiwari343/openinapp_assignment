@@ -15,7 +15,7 @@
      align-items: center;
      min-height: 100vh;
      width: 35%;
-     background-color: #000000;
+     background: linear-gradient(180deg, #4285F4 0%, #286DE0 100%);
  }
 
  .leftmobile {
@@ -41,8 +41,8 @@
 
  .head {
      font-family: 'Arial' Sans-serif;
-     font-size: 72px;
-     font-weight: 700;
+     font-size: 64px;
+     font-weight: 1000;
      line-height: 88px;
      letter-spacing: 0em;
      text-align: left;
@@ -236,7 +236,7 @@
 
  .gimage,
  .aimage {
-     width: 14px;
+     width: 20px;
      height: 14px;
      top: 362px;
      left: 851px;
@@ -332,7 +332,7 @@
      width: 325px;
      height: 40px;
      border-radius: 10px;
-     background-color: #000000;
+     background: linear-gradient(180deg, #4285F4 0%, #286DE0 100%);
      color: #ffffff;
      outline: none;
      border: none;

@@ -1,19 +1,17 @@
 import React from 'react';
-
+import Sidebar from './Sidebar';
+import "./css/board.css"
+import Navbar from './Navbar';
 const Board = () => {
   return (
     <>
-      <div className="grid-container2">
-        <div className="sidebar">
-          hello board
+      <div className="pagecontent">
+        <div className="sidenav">
+          <Sidebar />
         </div>
-        <div>
-          <div className="navbar">
-
-          </div>
-
+        <div className="main">
+            <Navbar />
         </div>
-
       </div>
 
     </>
