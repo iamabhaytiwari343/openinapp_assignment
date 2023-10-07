@@ -28,8 +28,9 @@ const Login = () => {
 
   return (
     <>
-      <div className="container">
-        <div className="grid-item g1">
+      <div className="container g1">
+        <div className="grid-item left">
+          <p className='logo'>LOGO</p>
           <h1>Boards.</h1>
           <p>Your platform for collaboration</p>
         </div>
