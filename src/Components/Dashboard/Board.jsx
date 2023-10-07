@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from './Sidebar';
 import "./css/board.css"
-import Navbar from './Navbar';
+// import Main from './Main';
 const Board = () => {
   return (
     <>
@@ -10,7 +10,7 @@ const Board = () => {
           <Sidebar />
         </div>
         <div className="main">
-            <Navbar />
+          {/* <Main className="navigationmenu" /> */}
         </div>
       </div>
 
