@@ -33,3 +33,46 @@
     margin-left: 160px;
     padding: 0px 10px;
 }
+
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the navbar */
+nav {
+    background-color: #333;
+    /* Background color of the navbar */
+    color: #fff;
+    /* Text color */
+}
+
+ul {
+    list-style-type: none;
+    /* Remove default list bullet points */
+    display: flex;
+    /* Display list items horizontally */
+    justify-content: center;
+    /* Center align list items horizontally */
+}
+
+li {
+    margin: 0 20px;
+    /* Add some spacing between list items */
+}
+
+a {
+    text-decoration: none;
+    /* Remove underlines from links */
+    color: #fff;
+    /* Link text color */
+    font-weight: bold;
+    /* Make link text bold */
+}
+
+/* Style the links on hover */
+a:hover {
+    text-decoration: underline;
+    /* Add underline on hover */
+}
