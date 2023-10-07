@@ -5,7 +5,6 @@ import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
 // import auth from '../../firebase';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 const Signup = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState();
@@ -51,25 +50,26 @@ const Signup = () => {
                     <div className="grid-item">
                         <div className="centered">
                             <h2>SignUP</h2>
-                            <p>Create your account </p>
+                            <p>Create your account</p>
                             <div className="button-social">
                                 <button className="google-button"><i className="fab fa-google"></i>Sign Up with Google</button>
                                 <button className="apple-button"><i className="fab fa-apple"></i>Sign Up with Apple</button>
                             </div>
-                            <form action="#" method="post">
-                                <div className="form-group">
-                                    <p>Email</p>
-                                    <input type="email" id="email" name="email" label='EMAIL ADDRESS' value={email || ''} onChange={handleEmailChange} required placeholder='email adress' />
-                                </div>
-                                <div className="form-group">
-                                    <p>Password</p>
-                                    <input type="password" id="password" name="password" label='create password' value={password || ''} onChange={handlePasswordChange} required placeholder='Password' />
-                                </div>
-                                <p><a href="/forgot-password">Forgot Password?</a></p>
-                                <button type="submit" onClick={onSubmit}>Sign Up</button>
-                            </form>
-
-                            <p>I have an account... <NavLink to={'/'}>Login here</NavLink></p>
+                            <div className="formContainer">
+                                <form action="#" method="post">
+                                    <div className="form-group">
+                                        <p>Email</p>
+                                        <input type="email" id="email" name="email" label='EMAIL ADDRESS' value={email || ''} onChange={handleEmailChange} required placeholder='email adress' />
+                                    </div>
+                                    <div className="form-group">
+                                        <p>Password</p>
+                                        <input type="password" id="password" name="password" label='create password' value={password || ''} onChange={handlePasswordChange} required placeholder='Password' />
+                                    </div>
+                                    <p><a href="/forgot-password">Forgot Password?</a></p>
+                                    <button type="submit" onClick={onSubmit}>Sign Up</button>
+                                </form>
+                                <p>I have an account... <NavLink to={'/'}>Login here</NavLink></p>
+                            </div>
                         </div>
                     </div>
                 </div>

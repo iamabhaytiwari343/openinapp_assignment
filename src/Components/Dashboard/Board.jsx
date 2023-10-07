@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './NavBar';
 import Sidebar from './SideBar';
 import './style.css';
+import Chart from './Chart';
 const Board = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const Board = () => {
           <div className="navbar">
             <Navbar />
           </div>
+          <Chart />
         </div>
 
       </div>

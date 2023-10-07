@@ -1,3 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to right, white 0%, white 50%, skyblue 50%, skyblue 100%);
+    background-size: 200% 100%;
+    animation: gradient-animation 10s linear infinite;
+}
+/* 
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+} */
+
 /* App.css */
 .grid-container2 {
     display: grid;

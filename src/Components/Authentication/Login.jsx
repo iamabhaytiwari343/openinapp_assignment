@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
 import './style.css';
-import { signInWithEmailAndPassword, getAuth } from 'firebase/auth';
+import { signInWithEmailAndPassword,getAuth} from 'firebase/auth';
 import '../../firebase';
 import { NavLink, useNavigate } from 'react-router-dom'
+
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const auth = getAuth();
-  const onLogin = (e) => {
+  const onLogin = async (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
+    await signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
@@ -27,23 +28,25 @@ const Login = () => {
 
   return (
     <>
-      <div class="container">
-        <div class="grid-container">
-          <div class="grid-item g1">
-            <h1>Boards.</h1>
-            <p>Your platform for collaboration</p>
-          </div>
-          <div class="grid-item">
-            <div class="centered">
-              <h2>Login</h2>
-              <p>Sign in with your account </p>
-              <div class="button-social">
-                <button class="google-button"><i class="fab fa-google"></i>Sign In with Google</button>
-                <button class="apple-button"><i class="fab fa-apple"></i>Sign In with Apple</button>
-              </div>
+      <div className="container">
+        <div className="grid-item g1">
+          <h1>Boards.</h1>
+          <p>Your platform for collaboration</p>
+        </div>
+        <div className="grid-item">
+          <div className="centered">
+            <h2>Login</h2>
+            <p>Sign in with your account</p>
+            <div className="button-social">
+              <button className="google-button">Sign In with Google</button>
+              <button className="apple-button">Sign In with Apple</button>
+            </div>
+
+
+            <div className="formContainer">
               <form action="#" method="post">
-                <div class="form-group">
-                  <p>Email</p>
+                <div className="form-group">
+                  <label htmlFor="email-address">Email</label>
                   <input
                     id="email-address"
                     name="email"
@@ -53,8 +56,8 @@ const Login = () => {
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
-                <div class="form-group">
-                  <p>Password</p>
+                <div className="form-group">
+                  <label htmlFor="password">Password</label>
                   <input
                     id="password"
                     name="password"
@@ -67,10 +70,11 @@ const Login = () => {
                 <p><a href="/forgot-password">Forgot Password?</a></p>
                 <button type="submit" onClick={onLogin}>Log In</button>
               </form>
-
               <p>Don't have an account? <NavLink to={'/signup'}>Register here</NavLink></p>
             </div>
           </div>
+
+
         </div>
       </div>
     </>
