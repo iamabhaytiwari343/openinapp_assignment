@@ -5,13 +5,13 @@ const Board = () => {
     <>
       <div className="grid-container2">
         <div className="sidebar">
-          
+          hello board
         </div>
         <div>
           <div className="navbar">
-           
+
           </div>
-          
+
         </div>
 
       </div>

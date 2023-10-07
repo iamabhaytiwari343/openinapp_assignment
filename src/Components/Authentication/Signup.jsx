@@ -16,7 +16,7 @@ const Signup = () => {
         await createUserWithEmailAndPassword(auth, email, password).then((usercredential) => {
             const user = usercredential.user
             console.log(user);
-            navigate("/1");
+            navigate("/");
             toast.success('User signup successful!', {
                 position: toast.POSITION.TOP_CENTER,
                 autoClose: 2000, // Auto close the toast after 2 seconds
@@ -42,38 +42,48 @@ const Signup = () => {
     return (
         <>
             <div className="container">
-                <div className="grid-container">
-                    <div className="grid-item g1">
-                        <h1>Boards.</h1>
-                        <p></p>
-                    </div>
-                    <div className="grid-item">
-                        <div className="centered">
-                            <h2>SignUP</h2>
-                            <p>Create your account</p>
-                            <div className="button-social">
-                                <button className="google-button"><i className="fab fa-google"></i>Sign Up with Google</button>
-                                <button className="apple-button"><i className="fab fa-apple"></i>Sign Up with Apple</button>
+                <div className="left">
+                    <h1 className="head">Board.</h1>
+                </div>
+                <div className="leftmobile">
+                    <h1 className="head">Board.</h1>
+                </div>
+
+                <div className="right">
+
+                    <div className="ccentre">
+                        <h1 className="title">Sign UP</h1>
+                        <p className="gsign">Signup For  Account</p>
+                        <div className="minicontainer">
+                            <div className="gcontainer">
+                                <img className="gimage" src="https://res.cloudinary.com/dbx7qfdwo/image/upload/v1696670881/image8-2.jpg_kxct7t.jpg" alt="Google" />
+                                <button className="gtitle">Signup with Google</button>
                             </div>
-                            <div className="formContainer">
-                                <form action="#" method="post">
-                                    <div className="form-group">
-                                        <p>Email</p>
-                                        <input type="email" id="email" name="email" label='EMAIL ADDRESS' value={email || ''} onChange={handleEmailChange} required placeholder='email adress' />
-                                    </div>
-                                    <div className="form-group">
-                                        <p>Password</p>
-                                        <input type="password" id="password" name="password" label='create password' value={password || ''} onChange={handlePasswordChange} required placeholder='Password' />
-                                    </div>
-                                    <p><a href="/forgot-password">Forgot Password?</a></p>
-                                    <button type="submit" onClick={onSubmit}>Sign Up</button>
-                                </form>
-                                <p>I have an account... <NavLink to={'/'}>Login here</NavLink></p>
+                            <div className="acontainer">
+                                <img className="aimage" src="https://res.cloudinary.com/dbx7qfdwo/image/upload/v1696671121/_1511456315_653_apple-mobile_whwlf6.jpg" alt="Apple" />
+                                <button className="atitle">Signup with Apple</button>
                             </div>
+                        </div>
+                        <form className="form-container">
+                            <div className="input">
+                                <label htmlFor="email" className="label">Email address</label>
+                                <input id="email" type="text" className="format" placeholder="example@example.com" onChange={handleEmailChange} />
+                            </div>
+                            <div className="input">
+                                <label htmlFor="password" className="label">Password</label>
+                                <input id="password" type="password" className="format" placeholder="Password" onChange={handlePasswordChange} />
+                            </div>
+                            <p className="forget-password">Forgot password?</p>
+                            <button className="signin-button" type="submit" onClick={onSubmit}>Sign UP</button>
+                        </form>
+                        <div className="register">
+                            <p className="text-description">I have my account.</p>
+                            <button className="register-link" type="button"><NavLink to={'/'}>  Login here</NavLink></button>
                         </div>
                     </div>
                 </div>
             </div>
+
             <ToastContainer />
         </>
     )

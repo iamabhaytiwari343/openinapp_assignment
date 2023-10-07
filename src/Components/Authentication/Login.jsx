@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './style.css';
-import { signInWithEmailAndPassword,getAuth} from 'firebase/auth';
+import { signInWithEmailAndPassword, getAuth } from 'firebase/auth';
 import '../../firebase';
 import { NavLink, useNavigate } from 'react-router-dom'
 
@@ -25,57 +25,56 @@ const Login = () => {
       });
 
   }
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
 
   return (
     <>
-      <div className="container g1">
-        <div className="grid-item left">
-          <p className='logo'>LOGO</p>
-          <h1>Boards.</h1>
-          <p>Your platform for collaboration</p>
+      <div className="container">
+        <div className="left">
+          <h1 className="head">Board.</h1>
         </div>
-        <div className="grid-item">
-          <div className="centered">
-            <h2>Login</h2>
-            <p>Sign in with your account</p>
-            <div className="button-social">
-              <button className="google-button">Sign In with Google</button>
-              <button className="apple-button">Sign In with Apple</button>
+        <div className="leftmobile">
+          <h1 className="head">Board.</h1>
+        </div>
+
+        <div className="right">
+
+          <div className="ccentre">
+            <h1 className="title">Sign In</h1>
+            <p className="gsign">Sign in to your account</p>
+            <div className="minicontainer">
+              <div className="gcontainer">
+                <img className="gimage" src="https://res.cloudinary.com/dbx7qfdwo/image/upload/v1696670881/image8-2.jpg_kxct7t.jpg" alt="Google" />
+                <button className="gtitle">Sign in with Google</button>
+              </div>
+              <div className="acontainer">
+                <img className="aimage" src="https://res.cloudinary.com/dbx7qfdwo/image/upload/v1696671121/_1511456315_653_apple-mobile_whwlf6.jpg" alt="Apple" />
+                <button className="atitle">Sign in with Apple</button>
+              </div>
             </div>
-
-
-            <div className="formContainer">
-              <form action="#" method="post">
-                <div className="form-group">
-                  <label htmlFor="email-address">Email</label>
-                  <input
-                    id="email-address"
-                    name="email"
-                    type="email"
-                    required
-                    placeholder="Email address"
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="password">Password</label>
-                  <input
-                    id="password"
-                    name="password"
-                    type="password"
-                    required
-                    placeholder="Password"
-                    onChange={(e) => setPassword(e.target.value)}
-                  />
-                </div>
-                <p><a href="/forgot-password">Forgot Password?</a></p>
-                <button type="submit" onClick={onLogin}>Log In</button>
-              </form>
-              <p>Don't have an account? <NavLink to={'/signup'}>Register here</NavLink></p>
+            <form className="form-container">
+              <div className="input">
+                <label htmlFor="email" className="label">Email address</label>
+                <input id="email" type="text" className="format" placeholder="example@example.com" onChange={handleEmailChange} />
+              </div>
+              <div className="input">
+                <label htmlFor="password" className="label">Password</label>
+                <input id="password" type="password" className="format" placeholder="Password" onChange={handlePasswordChange} />
+              </div>
+              <p className="forget-password">Forgot password?</p>
+              <button className="signin-button" type="submit" onClick={onLogin}>Sign In</button>
+            </form>
+            <div className="register">
+              <p className="text-description">Don’t have an account?</p>
+              <button className="register-link" type="button"><NavLink to={'/signup'}>Register here</NavLink></button>
             </div>
           </div>
-
-
         </div>
       </div>
     </>
