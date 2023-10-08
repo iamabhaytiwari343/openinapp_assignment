@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import "./css/board.css";
-import DemoPieChart from './utils/DemoPieChart';
 import BarChart from './utils/BarChart';
 import icon from "./utils/icon.png";
 import Card from './utils/Cards';
