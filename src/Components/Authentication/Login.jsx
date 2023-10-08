@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './style.css';
-import { signInWithEmailAndPassword, getAuth } from 'firebase/auth';
-import '../../firebase';
+import { signInWithEmailAndPassword, signInWithPopup, getAuth, } from 'firebase/auth';
+import { provider, app } from '../../firebase';
 import { NavLink, useNavigate } from 'react-router-dom'
 
 const Login = () => {
@@ -33,6 +33,18 @@ const Login = () => {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
+  const signInWithGoogle = async () => {
+    try {
+      await signInWithPopup(auth, provider).then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        navigate("/home")
+        console.log(user);
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  }
 
   return (
     <>
@@ -52,7 +64,7 @@ const Login = () => {
             <div className="minicontainer">
               <div className="gcontainer">
                 <img className="gimage" src="https://res.cloudinary.com/dbx7qfdwo/image/upload/v1696670881/image8-2.jpg_kxct7t.jpg" alt="Google" />
-                <button className="gtitle">Sign in with Google</button>
+                <button className="gtitle" onClick={signInWithGoogle}>Sign in with Google</button>
               </div>
               <div className="acontainer">
                 <img className="aimage" src="https://res.cloudinary.com/dbx7qfdwo/image/upload/v1696671121/_1511456315_653_apple-mobile_whwlf6.jpg" alt="Apple" />
