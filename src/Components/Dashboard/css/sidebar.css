@@ -72,6 +72,8 @@
 
 .help,
 .contact {
+    margin: 0.2rem;
+    padding: 0.2rem;
     font-size: 16px;
     font-weight: 400;
     line-height: 17px;

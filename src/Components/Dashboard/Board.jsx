@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import "./css/board.css";
 import DemoPieChart from './utils/DemoPieChart';
 import BarChart from './utils/BarChart';
 import icon from "./utils/icon.png";
 import Card from './utils/Cards';
+import DonutChart from './utils/DonutChart';
 
 const Board = () => {
   const guestData = [30, 45, 60, 70, 80]; // Replace with your guest data
   const userData = [40, 55, 70, 80, 90];
+
+
   return (
     <>
       <div className="pagecontent">
@@ -16,26 +19,27 @@ const Board = () => {
           <Sidebar />
         </div>
         <div className="maincontainerdashoard">
-          <nav>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Contact</a></li>
+          {/* <nav className='navbaronboard'>
+            <ul className='listnavbar'>
+              <li className='listitem-navbar'><a href="#">Home</a></li>
+              <li className='listitem-navbar'><a href="#">About</a></li>
+              <li className='listitem-navbar'><a href="#">Services</a></li>
+              <li className='listitem-navbar'><a href="#">Portfolio</a></li>
+              <li className='listitem-navbar'><a href="#">Contact</a></li>
             </ul>
-          </nav>
+          </nav> */}
           <div className="cards">
-            <Card icon={icon} totalRevenue="269872" percentageChange="2.4" />
-            <Card icon={icon} totalRevenue="269872" percentageChange="2.4" />
-            <Card icon={icon} totalRevenue="269872" percentageChange="2.4" />
-            <Card icon={icon} totalRevenue="269872" percentageChange="2.4" />
+            <Card icon={icon} vari="Total Revenue" totalRevenue="2129430" percentageChange="2.5" />
+            <Card icon={icon} vari="Total Transaction" totalRevenue="1520" percentageChange="1.7" />
+            <Card icon={icon} vari="Total Likes" totalRevenue="9721" percentageChange="1.4" />
+            <Card icon={icon} vari="Total Users" totalRevenue="9721" percentageChange="4.2" />
           </div>
-          <BarChart guestData={guestData} userData={userData} />
           <div className='bottomrightinhome'>
-            <DemoPieChart />
+            <DonutChart />
           </div>
-
+          <div className="chartcontainer-one">
+            <BarChart guestData={guestData} userData={userData} className='chartstyles-bar' options={'responsive: true'} />
+          </div>
 
 
 
@@ -43,6 +47,6 @@ const Board = () => {
       </div>
     </>
   )
-}
+};
 
-export default Board
+export default Board;
