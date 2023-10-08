@@ -1,0 +1,36 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    font-size: 32px;
+    margin-right: 16px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.revenue {
+    font-size: 24px;
+    margin-top: 8px;
+}
+
+.percentage {
+    font-size: 16px;
+    color: green;
+    /* You can customize the color */
+    margin-top: 8px;
+}

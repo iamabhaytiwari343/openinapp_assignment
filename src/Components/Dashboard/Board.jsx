@@ -3,6 +3,8 @@ import Sidebar from './Sidebar';
 import "./css/board.css";
 import DemoPieChart from './utils/DemoPieChart';
 import BarChart from './utils/BarChart';
+import icon from "./utils/icon.png";
+import Card from './utils/Cards';
 
 const Board = () => {
   const guestData = [30, 45, 60, 70, 80]; // Replace with your guest data
@@ -23,8 +25,17 @@ const Board = () => {
               <li><a href="#">Contact</a></li>
             </ul>
           </nav>
+          <div className="cards">
+            <Card icon={icon} totalRevenue="269872" percentageChange="2.4" />
+            <Card icon={icon} totalRevenue="269872" percentageChange="2.4" />
+            <Card icon={icon} totalRevenue="269872" percentageChange="2.4" />
+            <Card icon={icon} totalRevenue="269872" percentageChange="2.4" />
+          </div>
           <BarChart guestData={guestData} userData={userData} />
-          <DemoPieChart />
+          <div className='bottomrightinhome'>
+            <DemoPieChart />
+          </div>
+
 
 
 
