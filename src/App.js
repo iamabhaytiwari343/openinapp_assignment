@@ -1,7 +1,7 @@
 import Login from './Components/Authentication/Login';
 import Signup from './Components/Authentication/Signup';
 import DashBoard from './Components/Dashboard/DashBoard';
-import Board from './Components/Dashboard/Board';
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -11,7 +11,6 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Login />} />
           <Route exact path="/signup" element={<Signup />} />
-          <Route exact path="/home" element={<Board />} />
           <Route exact path="/temp" element={<DashBoard />} />
         </Routes>
       </Router>

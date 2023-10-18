@@ -9,8 +9,8 @@ import DonutChart from './utils/DonutChart';
 import { FaUserPlus } from 'react-icons/fa';
 
 const DashBoard = () => {
-    const guestData = [30, 45, 60, 70, 80]; // Replace with your guest data
-    const userData = [40, 55, 70, 80, 90];
+    const guestData = [400, 450, 300, 350]; // Replace with your guest data
+    const userData = [500, 350, 200, 400];
     return (
         <>
             <div className="dashboardContainer">

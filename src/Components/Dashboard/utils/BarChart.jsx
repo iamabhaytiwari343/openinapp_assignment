@@ -16,7 +16,7 @@ const BarChart = ({ guestData, userData }) => {
         chartInstance = new Chart(myChartRef, {
             type: 'bar',
             data: {
-                labels: ['2019', '2020', '2021', '2022', '2023'],
+                labels: ['week1', 'week2', 'week3', 'week4'],
                 datasets: [
                     {
                         label: 'Guest',
