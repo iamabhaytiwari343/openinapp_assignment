@@ -1,0 +1,112 @@
+/* styles for siebar container */
+.sidebarContainer {
+    height: 100vh;
+    background: linear-gradient(#4285F4 0%, #286DE0 100%);
+    border-radius: 1rem;
+    color: #fff;
+    width: 20vw;
+}
+
+.sidebar {
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashtitle {
+    color: #ffffff;
+    margin-top: 0px;
+    padding-bottom: 3%;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.menucontainer {
+    color: #ffffff;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    width: 150px;
+}
+
+
+.itemcontainermenu {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+    padding-left: 20px;
+    font-family: 'Arial' Sans-serif;
+}
+
+.bottomcontainer {
+    line-height: 20px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+}
+
+.help,
+.contact {
+    margin: 0.2rem;
+    padding: 0.2rem;
+    font-size: 16px;
+    font-weight: 400;
+
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+}
+
+.menuicon {
+    margin-right: 10px;
+    /* Add some spacing between the icon and text */
+    font-size: 24px;
+    /* Adjust the icon size as needed */
+    color: #333;
+    /* Set the icon color */
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        padding-left: 10%;
+        padding-top: 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .help,
+    .contact {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bottomcontainer {
+        padding-left: 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .itemcontainermenu {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dashtitle {
+        font-size: 26px;
+    }
+}

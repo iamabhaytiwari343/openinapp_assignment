@@ -30,11 +30,18 @@ const DashBoard = () => {
                         </div>
                     </div>
                     <div className="barChartContainer">
+                        <h2>Activities</h2>
+                        <p>May-June 2021</p>
                         <BarChart guestData={guestData} userData={userData} className='chartstyles-bar' options={'responsive: true'} />
                     </div>
                     <div className="additionalcomponentContainer">
                         <div className="piechartcomponentContainer">
-                            <DonutChart />
+                            <h3>Top Products</h3>
+                            <p>May-June 2021</p>
+                            <div className="containerforchartPIe">
+                                <DonutChart />
+                            </div>
+
                         </div>
                         <div className="addProfileContainer">
                             <div className="add-profile-card">

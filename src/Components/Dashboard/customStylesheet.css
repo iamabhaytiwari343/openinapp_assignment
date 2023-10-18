@@ -27,11 +27,19 @@
 
 /* Chart Styles */
 .barChartContainer {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 10px;
 }
 
 /* Pie Chart Styles */
 .pieChartContainer {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 200px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #f5f5f5;
     padding: 10px;
     border-radius: 5px;
@@ -39,7 +47,6 @@
 
 .additionalcomponentContainer {
     display: flex;
-
     justify-content: center;
     align-items: center;
     margin: 20px;
@@ -136,4 +143,8 @@
     font-size: 16px;
     color: #333;
     margin-top: 10px;
+}
+
+.containerforchartPIe {
+    display: flex;
 }

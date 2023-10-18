@@ -2,13 +2,12 @@ import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 
 const DonutChart = () => {
-    // Define your data and options for the donut chart
     const data = {
-        labels: ['Red', 'Blue', 'Yellow'],
+        // labels: ['Basic Tees', 'Custom Short Pants', 'super hoodies'],
         datasets: [
             {
-                data: [300, 50, 100],
-                backgroundColor: ['#FF5733', '#3366FF', '#FFD700'],
+                data: [55, 31, 14],
+                backgroundColor: ['#98D89E', '#EE8484', '#FFD700'],
             },
         ],
     };

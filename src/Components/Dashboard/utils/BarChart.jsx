@@ -34,6 +34,9 @@ const BarChart = ({ guestData, userData }) => {
                 scales: {
                     y: {
                         beginAtZero: true,
+                        min: 0,
+                        max: 500,
+                        stepSize: 100
                     },
                 },
             },
