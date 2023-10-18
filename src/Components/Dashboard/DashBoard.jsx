@@ -40,6 +40,13 @@ const DashBoard = () => {
                             <p>May-June 2021</p>
                             <div className="containerforchartPIe">
                                 <DonutChart />
+                                <div className="listitem">
+                                    <ul>
+                                        <li>Basic Tees <br /> 55%</li>
+                                        <li>Custom Short Pants <br /> 31%</li>
+                                        <li>Super Hoodies <br /> 14%</li>
+                                    </ul>
+                                </div>
                             </div>
 
                         </div>
