@@ -18,15 +18,6 @@ const Board = () => {
           <Sidebar />
         </div>
         <div className="maincontainerdashoard">
-          {/* <nav className='navbaronboard'>
-            <ul className='listnavbar'>
-              <li className='listitem-navbar'><a href="#">Home</a></li>
-              <li className='listitem-navbar'><a href="#">About</a></li>
-              <li className='listitem-navbar'><a href="#">Services</a></li>
-              <li className='listitem-navbar'><a href="#">Portfolio</a></li>
-              <li className='listitem-navbar'><a href="#">Contact</a></li>
-            </ul>
-          </nav> */}
           <div className="cards">
             <Card icon={icon} vari="Total Revenue" totalRevenue="2129430" percentageChange="2.5" />
             <Card icon={icon} vari="Total Transaction" totalRevenue="1520" percentageChange="1.7" />
@@ -39,9 +30,6 @@ const Board = () => {
           <div className="chartcontainer-one">
             <BarChart guestData={guestData} userData={userData} className='chartstyles-bar' options={'responsive: true'} />
           </div>
-
-
-
         </div>
       </div>
     </>

@@ -19,8 +19,8 @@
 
 /* Navbar Styles */
 .navbarContainer {
-    background-color: #222;
-    color: #fff;
+    /* background-color: white;
+    color: #fff; */
     padding: 10px;
     text-align: center;
 }
@@ -39,6 +39,24 @@
 
 .additionalcomponentContainer {
     display: flex;
+
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .additionalcomponentContainer {
+        flex-direction: column;
+        /* Stack components vertically on small screens */
+    }
+
+    .addProfileContainer {
+        width: 80%;
+        /* Adjust the width for smaller screens */
+        margin: 10px;
+    }
 }
 
 /* Add Profile Styles */
@@ -89,4 +107,33 @@
         width: 100%;
         /* Make the cards take up the full width */
     }
+}
+
+/* AddProfileCard.css */
+
+.add-profile-card {
+    text-align: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 200px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 48px;
+    color: #007bff;
+    /* Icon color */
+}
+
+.icon {
+    vertical-align: middle;
+}
+
+.text {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
 }

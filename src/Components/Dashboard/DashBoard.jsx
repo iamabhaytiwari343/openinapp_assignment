@@ -3,7 +3,14 @@ import "./customStylesheet.css";
 import Sidebar from './Sidebar';
 import icon from "./utils/icon.png";
 import Card from './utils/Cards';
+import Navbar from './utils/Navbar';
+import BarChart from './utils/BarChart';
+import DonutChart from './utils/DonutChart';
+import { FaUserPlus } from 'react-icons/fa';
+
 const DashBoard = () => {
+    const guestData = [30, 45, 60, 70, 80]; // Replace with your guest data
+    const userData = [40, 55, 70, 80, 90];
     return (
         <>
             <div className="dashboardContainer">
@@ -12,7 +19,7 @@ const DashBoard = () => {
                 </div>
                 <div className="mainContentContainer">
                     <div className="navbarContainer">
-                        NAVBAR
+                        <Navbar />
                     </div>
                     <div className="statsCardContainer">
                         <div className="cards">
@@ -23,14 +30,19 @@ const DashBoard = () => {
                         </div>
                     </div>
                     <div className="barChartContainer">
-                        barChartContainer
+                        <BarChart guestData={guestData} userData={userData} className='chartstyles-bar' options={'responsive: true'} />
                     </div>
                     <div className="additionalcomponentContainer">
                         <div className="piechartcomponentContainer">
-                            piechartcontainer
+                            <DonutChart />
                         </div>
                         <div className="addProfileContainer">
-                            addprofile
+                            <div className="add-profile-card">
+                                <div className="logo">
+                                    <FaUserPlus className="icon" />
+                                </div>
+                                <div className="text">Add Profile</div>
+                            </div>
                         </div>
                     </div>
                 </div>

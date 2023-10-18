@@ -1,0 +1,58 @@
+/* Style the entire navbar */
+.navbar {
+    background-color: white;
+    /* Change this to your desired background color */
+    color: black;
+    /* Change text color as needed */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style the logo */
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Style the search bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+/* Style the search input */
+.search-bar input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    /* Add spacing between input and button */
+}
+
+/* Style the search button */
+.search-button {
+    background-color: #007bff;
+    /* Change this to your desired button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.sign-out {
+    display: flex;
+    align-items: center;
+}
+
+.sign-out-button {
+    background-color: #ff0000;
+    /* Change this to your desired sign-out button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
