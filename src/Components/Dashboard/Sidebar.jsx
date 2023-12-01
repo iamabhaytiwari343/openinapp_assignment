@@ -1,5 +1,5 @@
 import React from 'react';
-import "./css/sidebar.css";
+import "./utils/sidebar.css";
 import { FaHome, FaMoneyBill, FaCalendar, FaUsers, FaCog } from 'react-icons/fa'; // Importing Font Awesome icons
 
 const Sidebar = () => {
